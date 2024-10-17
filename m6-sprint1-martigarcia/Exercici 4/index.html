@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicació de Facturació</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; margin-top: 50px;">Aplicació de Facturació</h1>
+        
+        <div class="factura-form">
+            <h2 style="margin-bottom: 20px">Nova Factura</h2>
+            <table id="taulaFactura">
+                <thead>
+                    <tr>
+                        <th>Descripció</th>
+                        <th>Quantitat</th>
+                        <th>Taxa</th>
+                        <th>Import</th>
+                        <th>Accions</th>
+                    </tr>
+                </thead>
+                <tbody>
+<!-- LES FILES VAN AQUI! -->
+
+                </tbody>
+            </table>
+            <button id="afegirLinia">Afegir Línia</button>
+            <div>
+                <label for="descompte">Descompte (%):</label>
+                <input type="number" id="descompte" min="0" max="100" value="0">
+            </div>
+            <div>
+                <label for="gst">GST (%):</label>
+                <input type="number" id="gst" min="0" max="100" value="10">
+            </div>
+            <div id="totalFactura">Total: 0,00 €</div>
+            <button id="guardarFactura">Guardar Factura</button>
+        </div>
+
+        <div class="llistat-factures" style="margin-top: 20px;">
+            <h2>Llistat de Factures</h2>
+            <table id="taulaFactures">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data</th>
+                        <th>Total</th>
+                        <th>Accions</th>
+                    </tr>
+                </thead>
+                <tbody>
+<!-- LES FACTURESV AN AQUI -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
